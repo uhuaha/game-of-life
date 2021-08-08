@@ -16,15 +16,17 @@ func main() {
 	grid.Draw()
 
 	// Calculate next five generations of the grid
-	for i := 0; i < 5; i++ {
-		grid.CalculateNexGeneration()
+	for i := 0; i < 3; i++ {
+		err := grid.CalculateNexGeneration()
+		if err != nil {
+			log.Fatalf("%v", err)
+		}
 		grid.Draw()
 	}
 }
 
 func parseArguments() (int, int, error) {
 	args := os.Args
-	// args = []string{"", "8", "8"}
 
 	x, err := strconv.Atoi(args[1])
 	if err != nil {
