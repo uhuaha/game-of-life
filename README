@@ -1,0 +1,6 @@
+Execute program like this using an 8 by 8 grid: ./game-of-life 8 8
+
+Note: 
+This program does currently not work as expected. It should calculate 5 generations and draw them.
+However, the first generation does show differences to the initialized grid. After that all generations
+look identical.
