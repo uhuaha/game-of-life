@@ -1,19 +1,21 @@
-package main
+package grid
 
 import (
 	"fmt"
 	"time"
+
+	"github.com/uhuaha/game-of-life/cells"
 )
 
 type grid struct {
 	dx      int
 	dy      int
-	cells   CellsRepository
+	cells   cells.CellsRepository
 	display []byte
 }
 
 func NewGrid(x int, y int) GridRepository {
-	cells := NewCells(x, y)
+	cells := cells.NewCells(x, y)
 	cells.SetRandomValues()
 	display := cells.CreateGridForDisplay()
 	return &grid{dx: x, dy: y, cells: cells, display: display}

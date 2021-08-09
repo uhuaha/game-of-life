@@ -1,4 +1,4 @@
-package main
+package cells
 
 type Cell struct {
 	isAlive   bool

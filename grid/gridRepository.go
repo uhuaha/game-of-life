@@ -1,4 +1,4 @@
-package main
+package grid
 
 type GridRepository interface {
 	GetDimensions() (int, int)

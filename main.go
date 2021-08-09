@@ -5,6 +5,8 @@ import (
 	"log"
 	"os"
 	"strconv"
+
+	"github.com/uhuaha/game-of-life/grid"
 )
 
 func main() {
@@ -12,7 +14,7 @@ func main() {
 	if err != nil {
 		log.Fatalf("%v", err)
 	}
-	grid := NewGrid(x, y)
+	grid := grid.NewGrid(x, y)
 	grid.Draw()
 
 	// Calculate next five generations of the grid
